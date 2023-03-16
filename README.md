@@ -26,5 +26,16 @@ Delete the following files:
 Then start replacing the contents of files. Start with index.tsx:
 
 ```tsx
+import ReactDOM from 'react-dom/client';
+import { Providers } from './providers/Providers';
+import { Router } from './routing/Router';
 
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <Providers>
+    <Router />
+  </Providers>
+);
 ```
