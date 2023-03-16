@@ -1,7 +1,7 @@
 import { j } from '../jinaga-config';
 import { Alert, Box, Snackbar, SxProps } from '@mui/material';
 import Button from '@mui/material/Button';
-import { Project, ProjectName } from '../model/project';
+import { Project, ProjectName } from './project';
 import { uuid } from '@stablelib/uuid';
 import { useUser } from '../providers/UserProvider';
 import { ProjectDialog, ProjectInfo } from './ProjectDialog';

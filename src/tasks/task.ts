@@ -1,5 +1,5 @@
 import { AuthorizationRules, ModelBuilder } from "jinaga";
-import { invitedUsers, Project } from "./project";
+import { invitedUsers, Project } from "../projects/project";
 
 export class Task {
   static Type = 'CoLab.Task';
