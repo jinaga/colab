@@ -33,7 +33,9 @@ export class Invitation {
 }
 
 export const projectModel = (m: ModelBuilder) => m
-  .type(Project)
+  .type(Project, f => f
+    .predecessor("creator", User)
+  )
   .type(ProjectName, f => f
     .predecessor("project", Project)  
     .predecessor("prior", ProjectName)
