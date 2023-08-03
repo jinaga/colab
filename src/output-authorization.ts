@@ -1,14 +1,5 @@
-import { AuthorizationRules, describeAuthorizationRules } from "jinaga";
-import { model } from "./model";
-import { userAuthorization } from "./model/user";
-import { projectAuthorization } from "./projects/project";
-import { taskAuthorization } from "./tasks/task";
-
-const authorization = (a: AuthorizationRules) => a
-  .with(userAuthorization)
-  .with(projectAuthorization)
-  .with(taskAuthorization)
-  ;
+import { describeAuthorizationRules } from "jinaga";
+import { authorization, model } from "./model";
 
 const postData = describeAuthorizationRules(model, authorization);
 const url = process.argv[2];
